@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         За допомогою цикла for виведіть всі парні числа між 0 и 100
     </pre>
     <script>
-        
+      let evenNumber;
+      for (let i = 0; i <= 100; i += 1) {
+        if (i % 2 === 0) {
+          evenNumber = i;
+          console.log(i);
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

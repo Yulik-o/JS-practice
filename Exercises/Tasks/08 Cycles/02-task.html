@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 2</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         Напишіть сценарій, який має отримати значення більше 10 у користувача.
@@ -14,7 +14,27 @@
         Передбачати обробку нечислових значень необов'язково.
     </pre>
     <script>
-        
+      let userNumber;
+      //Variant 1
+      do {
+        userNumber = +prompt("Enter the number, bigger than 10");
+      } while (userNumber <= 10 || isNaN(userNumber));
+      alert("You entered " + userNumber);
+
+      {
+      }
+
+      //Variant 2
+      userNumber = +prompt("Enter the number, bigger than 10");
+      alert("You entered " + userNumber);
+
+      while (true) {
+        userNumber = +prompt("Enter the number, bigger than 10");
+        alert("You entered " + userNumber);
+        if (userNumber > 10) {
+          break;
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 5</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         Напишіть сценарій "Гра 'Вгадай число'". Суть гри – вгадати за меншу кількість спроб число, яке загадав сценарій.
@@ -28,7 +28,20 @@
         Сценарій: Правильно! Загадане значення 56. Ви вгадали з 4-ї спроби.
     </pre>
     <script>
-        
+      let randomValue = Math.floor(Math.random() * 101); // випадкове значення від 0 до 100 буде записано в змінну randomValue
+      alert("I've given you a number from 0 to 100, try to guess it");
+      while (true) {
+        let userValue = +prompt("Guess the number");
+        let message =
+          userValue > randomValue
+            ? `My number is less then ${userValue} `
+            : `My number is bigger then ${userValue} `;
+        alert(message);
+        if (userValue === randomValue) {
+          alert("Great, that's it!");
+          break;
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

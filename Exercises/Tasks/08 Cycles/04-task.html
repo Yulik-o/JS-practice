@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 4</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання: 
         Запросіть у користувача число, порахуйте суму всіх чисел між 0 та введенеми значенням та відтворіть результат на екрані.
+        
     </pre>
     <script>
-        
+      let userNumber = 0;
+      let startNumber = 0;
+      let sum = 0;
+      userNumber = +prompt("Enter number");
+      for (i = startNumber; i <= userNumber; i += 1) {
+        sum += i;
+      }
+      alert(
+        "The sum of the numbers between 0 and " + userNumber + " is " + sum
+      );
     </script>
-</body>
+  </body>
 </html>
