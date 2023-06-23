@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 7</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         Дано массив. Знайдіть середнє арифметичне значення цього массиву.
         Виведіть на екран тільки ті значення, які більше цього цього середнього арифметичного значення.
     </pre>
     <script>
-        let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
-        
+      let values = [
+        10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28,
+      ];
+      let arithmeticMean = 0;
+      let sum = 0;
+      for (const value of values) {
+        sum += value;
+      }
+      arithmeticMean = sum / values.length;
+      console.log("avarage is: " + arithmeticMean);
+      console.log("Bigger values than arithmetic mean are: ");
+      for (const value of values) {
+        if (value > arithmeticMean) {
+          console.log(value);
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

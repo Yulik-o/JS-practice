@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 4</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         Дано массив. Створіть на основі значень цього массиву два нових массиви. В один массив помістіть всі парні значення, а у другий всі непарні.
         Виведіть на екран значення, які війшли в перший массив та у другий массив.
     </pre>
     <script>
-        let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+      let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+      let evenArray = [];
+      let oddArray = [];
+      let evenNumber = 0;
+      let oddNumber = 0;
+      for (let value of values) {
+        if (value % 2 === 0) {
+          evenArray[evenNumber] = value;
+          evenNumber++;
+        } else {
+          oddArray[oddNumber] = value;
+          oddNumber++;
+        }
+      }
+      console.log("Even numbers are: ");
+      for (let evenNum of evenArray) {
+        console.log(evenNum);
+      }
+      console.log("Odd numbers are: ");
+      for (let oddNum of oddArray) {
+        console.log(oddNum);
+      }
     </script>
-</body>
+  </body>
 </html>
