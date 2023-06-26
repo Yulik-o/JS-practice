@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <pre>
         Завдання:
         Запросіть у користувача ввести назву міста. Видаліть це місто з елементів массиву.
@@ -13,7 +13,26 @@
         Виведіть массив на екран після видалення елементів.
     </pre>
     <script>
-        let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+      let cities = [
+        "London",
+        "Paris",
+        "Berlin",
+        "Rome",
+        "Budapest",
+        "Lisbon",
+        "Madrid",
+        "Amsterdam",
+      ];
+      let userCity = prompt("Enter the city name");
+      let cityIndex = cities.indexOf(userCity);
+      cities.splice(cityIndex, 1);
+      for (let city of cities) {
+        if (cityIndex === -1) {
+          alert("There is no such city");
+          break;
+        }
+      }
+      alert(cities);
     </script>
-</body>
+  </body>
 </html>
